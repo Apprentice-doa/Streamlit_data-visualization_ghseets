@@ -1,9 +1,8 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
-#import numpy as np
 import plotly.figure_factory as ff
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 @st.cache_data
@@ -21,9 +20,9 @@ st.title("E-Commerce Data Visualization")
 #st.bar_chart(ld["Product"])
 st.dataframe(ld)
 
-#fig = plt.figure(figsize=(10, 10))
+fig = plt.figure(figsize=(10, 10))
 sns.countplot(x= "Product", data=ld)
-#st.pyplot(fig)
+st.pyplot(fig)
 
 
 
