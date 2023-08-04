@@ -1,5 +1,4 @@
 import streamlit as st
-pip install streamlit git+https://github.com/streamlit/gsheets-connection
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 import plotly.figure_factory as ff
