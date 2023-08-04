@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.figure_factory as ff
 import matplotlib.pyplot as plt
 import seaborn as sns
+from PIL import Image
 
 @st.cache_data
 def load (link):
@@ -16,7 +17,15 @@ def load (link):
 ld = load("https://docs.google.com/spreadsheets/d/1Q3JpZ76p3_B2kWdP23373GzhpJ9kQhqGNvuad-6fHUc/edit?usp=sharing")
 
 
-st.title("E-Commerce Data Visualization")
+
+
+
+image = Image.open('cart.png')
+
+st.image(image, width=100)
+
+
+st.header("E-Commerce Data Analysis and  Visualization")
 #st.bar_chart(ld["Product"])
 st.dataframe(ld)
 
